@@ -28,21 +28,23 @@ I am currently strengthening my foundation in programming, data science, machine
 
 ## 📊 GitHub Stats
 
-![Ajay's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Ajay-Soni-CU&theme=dark&hide_border=false&include_all_commits=true&count_private=false)
+<img src="https://github-readme-stats.vercel.app/api?username=Ajay-Soni-CU&show_icons=true&theme=dark&hide_border=false&include_all_commits=true&count_private=false" alt="GitHub Stats" />
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Ajay-Soni-CU&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+<br/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ajay-Soni-CU&theme=dark&hide_border=false&layout=compact" alt="Top Languages" />
 
 ---
 
 ## ✍️ Developer Quote
 
-![Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Developer Quote" />
 
 ---
 
 ## 🔝 Top Contributed Repositories
 
-![Top Contributed Repo](https://github-contributor-stats.vercel.app/api?username=Ajay-Soni-CU&limit=5&theme=dark&combine_all_yearly_contributions=true)
+<img src="https://github-contributor-stats.vercel.app/api?username=Ajay-Soni-CU&limit=5&theme=dark&combine_all_yearly_contributions=true" alt="Top Contributed Repositories" />
 
 ---
 
