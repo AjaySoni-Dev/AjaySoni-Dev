@@ -1,5 +1,5 @@
 # 💫 About Me:
-I build applied machine learning and computer vision systems that move beyond experimentation and actually get used. My focus is on turning models into reliable, real-world tools rather than stopping at training metrics or academic demos.
+I build applied machine learning and computer vision systems that move beyond experimentation and actually get used. My focus is on turning models into reliable, real-world tools rather than stopping at training metrics or academic demos. 
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/www.instagram.com/im_ajay.soni/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/ajay-soni-cu/) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:programmingwithcode@gmail.com) 
