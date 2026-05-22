@@ -181,14 +181,14 @@ My current focus areas are machine learning workflows, computer vision pipelines
     <td align="center">
       <a href="https://git.io/awesome-stats-card">
         <img
-          src="https://awesome-github-stats.azurewebsites.net/user-stats/AjaySoni-Dev?cardType=level&theme=dark&preferLogin=false"
+          src="https://awesome-github-stats.azurewebsites.net/user-stats/AjaySoni-Dev?cardType=level&theme=dark&fontFamily=&preferLogin=false&Border=18040400"
           alt="Ajay Soni GitHub Stats"
         />
       </a>
     </td>
     <td align="center">
       <img
-        src="https://streak-stats.demolab.com?user=AjaySoni-Dev&theme=dark&hide_border=false"
+        src="https://streak-stats.demolab.com/?user=AjaySoni-Dev&theme=dark&hide_border=true"
         alt="GitHub Streak"
       />
     </td>
