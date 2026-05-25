@@ -186,12 +186,7 @@ My current focus areas are machine learning workflows, computer vision pipelines
         />
       </a>
     </td>
-    <td align="center">
-      <img
-        src="https://streak-stats.demolab.com/?user=AjaySoni-Dev&theme=dark&hide_border=true"
-        alt="GitHub Streak"
-      />
-    </td>
+    
   </tr>
 </table>
 
