@@ -2,7 +2,7 @@
 
 # Ajay Soni
 
-### Applied AI · Data Science · Computer Vision · Practical ML Systems
+### Applied AI · Data Science · Computer Vision · Practical ML Systems 
 
 <p>
   BCA Data Science student building practical machine learning, computer vision, and data-driven systems.
