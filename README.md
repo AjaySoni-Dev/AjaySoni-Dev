@@ -186,14 +186,14 @@ My current focus areas are machine learning workflows, computer vision pipelines
         />
       </a>
     </td>
-    <td align="center">
+    <!-- <td align="center">
       <a href="https://git.io/awesome-stats-card">
         <img
           src="https://github-readme-streak-stats.herokuapp.com?user=AjaySoni-Dev&theme=dark&hide_border=true"
           alt="Ajay Soni GitHub Stats"
         />
       </a>
-    </td>
+    </td> -->
   </tr>
 
   
