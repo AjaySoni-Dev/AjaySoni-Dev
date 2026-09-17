@@ -25,18 +25,132 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
-    /* Final visual refinements: preserve the established layout while making
-       utility controls more proportional and giving the LinkedIn mark safe padding. */
+    /* Final mobile polish: stronger depth/separation without changing the layout. */
+    :root {
+      --card: linear-gradient(135deg, rgba(255,255,255,.95), rgba(239,249,245,.88));
+      --card-hover: linear-gradient(135deg, rgba(255,255,255,.98), rgba(235,248,242,.94));
+      --card-border: rgba(50,119,94,.22);
+      --glass: rgba(255,255,255,.82);
+      --glass-strong: rgba(255,255,255,.95);
+      --shadow: 0 18px 44px rgba(35,88,70,.14);
+      --shadow-soft: 0 9px 26px rgba(35,88,70,.10);
+    }
+
+    html[data-theme="dark"] {
+      --card: linear-gradient(135deg, rgba(33,58,48,.95), rgba(20,42,34,.91));
+      --card-hover: linear-gradient(135deg, rgba(39,68,56,.98), rgba(25,49,40,.95));
+      --card-border: rgba(150,220,190,.22);
+      --glass: rgba(26,47,39,.86);
+      --glass-strong: rgba(32,57,47,.97);
+    }
+
+    body {
+      background:
+        radial-gradient(95% 58% at -8% 5%, rgba(86,215,173,.24), transparent 58%),
+        radial-gradient(78% 54% at 108% 11%, rgba(111,190,210,.20), transparent 60%),
+        radial-gradient(78% 58% at 9% 88%, rgba(74,205,158,.18), transparent 64%),
+        radial-gradient(60% 46% at 86% 75%, rgba(255,255,255,.58), transparent 70%),
+        linear-gradient(150deg, #f8fcfa 0%, #edf9f4 46%, #dff3e9 100%);
+    }
+
+    html[data-theme="dark"] body {
+      background:
+        radial-gradient(96% 62% at -8% 6%, rgba(47,139,105,.22), transparent 60%),
+        radial-gradient(78% 56% at 108% 12%, rgba(55,118,130,.18), transparent 62%),
+        radial-gradient(80% 60% at 8% 90%, rgba(37,116,88,.16), transparent 65%),
+        linear-gradient(150deg, #0c1713 0%, #10231b 52%, #0b1813 100%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image: radial-gradient(circle, rgba(42,116,90,.13) .55px, transparent .7px);
+      background-size: 18px 18px;
+      opacity: .23;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+    }
+
+    html[data-theme="dark"] body::after {
+      background-image: radial-gradient(circle, rgba(150,222,193,.10) .55px, transparent .7px);
+      opacity: .17;
+    }
+
+    .ambient {
+      filter: blur(92px);
+      opacity: .67;
+    }
+
+    .ambient--one {
+      width: 340px;
+      height: 340px;
+      background: rgba(77,211,163,.26);
+    }
+
+    .ambient--two {
+      width: 310px;
+      height: 310px;
+      background: rgba(106,190,204,.23);
+    }
+
+    .ambient--three {
+      width: 370px;
+      height: 370px;
+      background: rgba(64,194,145,.20);
+    }
+
+    .link-card {
+      border-color: var(--card-border);
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.90) inset,
+        0 1px 0 rgba(34,91,70,.05),
+        0 14px 34px rgba(34,87,69,.11),
+        0 4px 12px rgba(34,87,69,.045);
+    }
+
+    .link-card::after {
+      background: linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.06) 48%, transparent 72%);
+      opacity: .92;
+    }
+
+    .icon-box {
+      box-shadow: 0 5px 15px rgba(47,101,81,.085), 0 1px 0 rgba(255,255,255,.55) inset;
+    }
+
+    .social-button {
+      border-color: rgba(58,119,96,.16);
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 7px 22px rgba(35,88,70,.11), 0 1px 0 rgba(255,255,255,.70) inset;
+    }
+
+    html[data-theme="dark"] .social-button {
+      background: rgba(31,54,45,.90);
+      border-color: rgba(150,220,190,.16);
+    }
+
     .icon-box--linkedin svg {
       width: 25px;
       height: 25px;
       overflow: visible;
     }
 
+    .social-button[aria-label="LinkedIn"] {
+      color: var(--muted);
+    }
+
+    .social-button[aria-label="LinkedIn"]:hover {
+      color: var(--accent);
+    }
+
     .social-button[aria-label="LinkedIn"] svg {
-      width: 19px;
-      height: 19px;
+      width: 20px;
+      height: 20px;
       overflow: visible;
+      fill: currentColor;
+      stroke: none;
     }
 
     .copy-button {
@@ -200,10 +314,9 @@
       <a class="social-button" href="mailto:officialprofessionalmail@gmail.com" aria-label="Email">
         <svg viewBox="0 0 24 24"><path d="M3.5 5.5h17v13h-17z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>
       </a>
-      <a class="social-button" href="https://www.linkedin.com/in/ajaysoni-dev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: var(--muted);">
+      <a class="social-button" href="https://www.linkedin.com/in/ajaysoni-dev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="2.2" style="fill: currentColor; stroke: none;"/>
-          <path d="M6.95 10.15h2.45v7.25H6.95v-7.25Zm1.23-3.72a1.42 1.42 0 1 1 0 2.84 1.42 1.42 0 0 1 0-2.84Zm3.12 3.72h2.35v.99h.03c.33-.63 1.15-1.29 2.36-1.29 2.52 0 2.99 1.66 2.99 3.82v3.73h-2.45v-3.31c0-.79-.02-1.81-1.11-1.81-1.11 0-1.28.87-1.28 1.75v3.37H11.3v-7.25Z" style="fill: #ffffff; stroke: none;"/>
+          <path d="M5.34 7.43a2.06 2.06 0 1 0 0-4.12 2.06 2.06 0 0 0 0 4.12ZM3.56 20.45h3.56V9H3.56v11.45Zm5.79 0h3.55v-5.67c0-1.49.28-2.94 2.14-2.94 1.82 0 1.85 1.71 1.85 3.04v5.57h3.55v-6.29c0-3.09-.67-5.45-4.27-5.45-1.73 0-2.89.95-3.37 1.85h-.05V9H9.35v11.45Z"/>
         </svg>
       </a>
       <a class="social-button" href="https://github.com/AjaySoni-Dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
