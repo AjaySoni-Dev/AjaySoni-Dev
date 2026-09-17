@@ -56,26 +56,33 @@
     ensureMeta('googlebot', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
     ensureMeta('bingbot', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
     ensureMeta('keywords', 'Ajay Soni, AI System Builder, Applied AI, Machine Learning, Computer Vision, AI ML, SAS Certified Associate, Python, AI Systems, AjaySoni-Dev, ajaysoni-dev');
+    ensureMeta('application-name', 'Ajay Soni');
+    ensureMeta('creator', 'Ajay Soni');
 
     ensureLink('canonical', canonicalUrl);
-    const icon = ensureLink('icon', '/assets/favicon.svg?v=20260917-3', { type: 'image/svg+xml', sizes: 'any' });
+    const icon = ensureLink('icon', '/assets/profile.jpg?v=20260917-photo-1', { type: 'image/jpeg', sizes: 'any' });
     icon.setAttribute('fetchpriority', 'high');
-    ensureLink('manifest', '/site.webmanifest');
+    ensureLink('apple-touch-icon', '/assets/profile.jpg?v=20260917-photo-1', { sizes: '180x180' });
+    ensureLink('manifest', '/site.webmanifest?v=20260917-photo-1');
 
     ensurePropertyMeta('og:type', 'profile');
     ensurePropertyMeta('og:site_name', 'Ajay Soni');
+    ensurePropertyMeta('og:locale', 'en_IN');
     ensurePropertyMeta('og:title', title);
     ensurePropertyMeta('og:description', 'Applied AI/ML and computer vision systems builder. Explore Ajay Soni’s professional profiles, projects, and contact links.');
     ensurePropertyMeta('og:url', canonicalUrl);
     ensurePropertyMeta('og:image', profileImage);
-    ensurePropertyMeta('og:image:alt', 'Portrait of Ajay Soni');
+    ensurePropertyMeta('og:image:secure_url', profileImage);
+    ensurePropertyMeta('og:image:type', 'image/jpeg');
+    ensurePropertyMeta('og:image:alt', 'Ajay Soni — AI System Builder and SAS Certified Associate');
     ensurePropertyMeta('profile:first_name', 'Ajay');
     ensurePropertyMeta('profile:last_name', 'Soni');
 
-    ensureMeta('twitter:card', 'summary');
+    ensureMeta('twitter:card', 'summary_large_image');
     ensureMeta('twitter:title', title);
     ensureMeta('twitter:description', 'Applied AI/ML and computer vision systems builder. Explore projects and professional links.');
     ensureMeta('twitter:image', profileImage);
+    ensureMeta('twitter:image:alt', 'Ajay Soni — AI System Builder and SAS Certified Associate');
 
     if (!document.getElementById('ajay-structured-data')) {
       const structuredData = document.createElement('script');
@@ -90,7 +97,12 @@
             name: 'Ajay Soni',
             alternateName: ['AjaySoni-Dev', 'ajaysoni-dev'],
             url: canonicalUrl,
-            image: profileImage,
+            image: {
+              '@type': 'ImageObject',
+              url: profileImage,
+              contentUrl: profileImage,
+              caption: 'Ajay Soni'
+            },
             email: 'mailto:officialprofessionalmail@gmail.com',
             jobTitle: 'AI System Builder',
             description,
@@ -120,6 +132,7 @@
             '@id': `${canonicalUrl}#website`,
             url: canonicalUrl,
             name: 'Ajay Soni',
+            alternateName: 'Ajay Soni Professional Profile',
             description: 'Official professional links and portfolio gateway for Ajay Soni.',
             inLanguage: 'en',
             publisher: { '@id': `${canonicalUrl}#person` }
@@ -129,8 +142,13 @@
             '@id': `${canonicalUrl}#profilepage`,
             url: canonicalUrl,
             name: 'Ajay Soni | AI System Builder',
+            description: 'Official profile and professional links for Ajay Soni.',
             mainEntity: { '@id': `${canonicalUrl}#person` },
             isPartOf: { '@id': `${canonicalUrl}#website` },
+            primaryImageOfPage: {
+              '@type': 'ImageObject',
+              url: profileImage
+            },
             inLanguage: 'en'
           }
         ]
@@ -225,7 +243,7 @@
   if (typeof colorPreference.addEventListener === 'function') {
     colorPreference.addEventListener('change', onSystemThemeChange);
   } else if (typeof colorPreference.addListener === 'function') {
-    colorPreference.addListener('change', onSystemThemeChange);
+    colorPreference.addListener(onSystemThemeChange);
   }
 
   requestAnimationFrame(() => document.body.classList.add('is-ready'));
