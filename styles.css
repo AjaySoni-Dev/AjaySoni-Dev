@@ -466,7 +466,6 @@ a { color: inherit; }
 
 
 
-html[data-theme="dark"] .theme-icon--sun { opacity: 1; transform: scale(1) rotate(0); }
 
 .toast {
   position: fixed;
