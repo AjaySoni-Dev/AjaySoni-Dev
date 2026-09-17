@@ -1,4 +1,20 @@
-/* Portfolio actions: resume + DevArise, with height-aware mobile compaction. */
+/* Professional action hierarchy: Projects, GitHub, LinkedIn, Resume, DevArise, contact and social. */
+
+.icon-box--projects {
+  color: #2f9270;
+  background: rgba(211, 241, 229, .88);
+}
+
+.icon-box--projects svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .icon-box--resume {
   color: #2f9270;
   background: rgba(211, 241, 229, .88);
@@ -28,11 +44,8 @@
   filter: none;
 }
 
-html[data-theme="dark"] .icon-box--resume {
-  color: #79d9b1;
-  background: rgba(77, 150, 119, .16);
-}
 
+.projects-card .link-arrow svg,
 .resume-card .link-arrow svg,
 .devarise-card .link-arrow svg {
   width: 21px;
@@ -40,7 +53,7 @@ html[data-theme="dark"] .icon-box--resume {
 }
 
 /* Preserve the polished desktop proportions. On mobile, keep a deliberate
-   breathing zone above the avatar while still fitting six actions + footer. */
+   breathing zone above the avatar while fitting seven actions + footer. */
 @media (max-width: 600px) {
   .page-shell {
     padding-top: max(clamp(36px, 5dvh, 48px), env(safe-area-inset-top));
@@ -67,13 +80,13 @@ html[data-theme="dark"] .icon-box--resume {
   }
 
   .link-list {
-    gap: clamp(5px, .72dvh, 7px);
+    gap: clamp(5px, .68dvh, 7px);
     margin-top: clamp(10px, 1.65dvh, 16px);
   }
 
   .link-card {
     grid-template-columns: 42px minmax(0, 1fr) 22px;
-    min-height: clamp(52px, 7.15dvh, 58px);
+    min-height: clamp(51px, 6.8dvh, 57px);
     padding: 5px 11px;
     gap: 10px;
     border-radius: 16px;
@@ -160,7 +173,7 @@ html[data-theme="dark"] .icon-box--resume {
   }
 
   .link-card {
-    min-height: 50px;
+    min-height: 49px;
     grid-template-columns: 40px minmax(0, 1fr) 21px;
     padding: 4px 10px;
     gap: 9px;
