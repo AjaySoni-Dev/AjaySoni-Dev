@@ -58,8 +58,9 @@
     ensureMeta('keywords', 'Ajay Soni, AI System Builder, Applied AI, Machine Learning, Computer Vision, AI ML, SAS Certified Associate, Python, AI Systems, AjaySoni-Dev, ajaysoni-dev');
 
     ensureLink('canonical', canonicalUrl);
-    const icon = ensureLink('icon', '/favicon.ico?v=20260917-2', { type: 'image/x-icon', sizes: 'any' });
+    const icon = ensureLink('icon', '/assets/favicon.svg?v=20260917-3', { type: 'image/svg+xml', sizes: 'any' });
     icon.setAttribute('fetchpriority', 'high');
+    ensureLink('manifest', '/site.webmanifest');
 
     ensurePropertyMeta('og:type', 'profile');
     ensurePropertyMeta('og:site_name', 'Ajay Soni');
@@ -152,7 +153,6 @@
     themeToggle?.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
     themeMeta?.setAttribute('content', dark ? '#0c1713' : '#eaf8f1');
 
-    // Match the LinkedIn footer icon to the same neutral gray used by the other footer actions.
     if (footerLinkedIn) {
       footerLinkedIn.style.color = 'var(--muted)';
       footerLinkedIn.style.removeProperty('background');
@@ -225,7 +225,7 @@
   if (typeof colorPreference.addEventListener === 'function') {
     colorPreference.addEventListener('change', onSystemThemeChange);
   } else if (typeof colorPreference.addListener === 'function') {
-    colorPreference.addListener(onSystemThemeChange);
+    colorPreference.addListener('change', onSystemThemeChange);
   }
 
   requestAnimationFrame(() => document.body.classList.add('is-ready'));
