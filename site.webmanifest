@@ -1,7 +1,8 @@
 {
+  "id": "/",
   "name": "Ajay Soni — AI System Builder",
   "short_name": "Ajay Soni",
-  "description": "Official professional links and portfolio gateway for Ajay Soni, AI System Builder and SAS Certified Associate.",
+  "description": "Official professional profile and links for Ajay Soni, AI System Builder and SAS Certified Associate.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -9,10 +10,20 @@
   "theme_color": "#eaf8f1",
   "icons": [
     {
-      "src": "/assets/favicon.svg?v=20260917-3",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/assets/profile.jpg?v=20260917-photo-1",
+      "sizes": "320x320",
+      "type": "image/jpeg",
       "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/AjaySoni-Dev"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/ajaysoni-dev/"
     }
   ]
 }
