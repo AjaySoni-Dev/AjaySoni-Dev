@@ -6,6 +6,8 @@
   const copyButton = document.getElementById('copyEmail');
   const toast = document.getElementById('toast');
   const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const footerLinkedIn = document.querySelector('.social-button[aria-label="LinkedIn"]');
+  const footerLinkedInIcon = footerLinkedIn?.querySelector('svg');
   const storageKey = 'ajay-links-theme';
   let toastTimer;
 
@@ -22,6 +24,21 @@
     const dark = theme === 'dark';
     themeToggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
     themeMeta?.setAttribute('content', dark ? '#0c1713' : '#eaf8f1');
+
+    // Keep the LinkedIn footer mark crisp and recognisable in both themes.
+    // The inline SVG uses currentColor for its blue tile and white internal glyphs.
+    if (footerLinkedIn) {
+      footerLinkedIn.style.color = dark ? '#63aee8' : '#0a66c2';
+      footerLinkedIn.style.background = dark ? 'rgba(255,255,255,.12)' : 'rgba(255,255,255,.94)';
+      footerLinkedIn.style.borderColor = dark ? 'rgba(99,174,232,.20)' : 'rgba(10,102,194,.12)';
+    }
+
+    if (footerLinkedInIcon) {
+      footerLinkedInIcon.style.width = '20px';
+      footerLinkedInIcon.style.height = '20px';
+      footerLinkedInIcon.style.display = 'block';
+      footerLinkedInIcon.style.overflow = 'visible';
+    }
   };
 
   const showToast = (message) => {
