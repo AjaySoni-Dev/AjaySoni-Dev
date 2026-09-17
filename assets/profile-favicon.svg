@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs><clipPath id="r"><rect width="128" height="128" rx="24" ry="24"/></clipPath></defs>
+  <g clip-path="url(#r)">
+    <rect width="128" height="128" fill="#1fae9c"/>
+    <image href="/assets/profile.jpg" width="128" height="128" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+</svg>
