@@ -43,13 +43,18 @@
     return link;
   };
 
-  const loadPortfolioEnhancements = () => {
-    if (document.getElementById('portfolio-enhancements')) return;
+  const loadStylesheet = (id, href) => {
+    if (document.getElementById(id)) return;
     const link = document.createElement('link');
-    link.id = 'portfolio-enhancements';
+    link.id = id;
     link.rel = 'stylesheet';
-    link.href = '/portfolio-enhancements.css?v=20260918-1';
+    link.href = href;
     document.head.appendChild(link);
+  };
+
+  const loadPortfolioEnhancements = () => {
+    loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-2');
+    loadStylesheet('desktop-responsive', '/desktop-responsive.css?v=20260918-1');
   };
 
   const setupPortfolioActions = () => {
@@ -148,7 +153,7 @@
   const preferredTheme = () => {
     const stored = localStorage.getItem(storageKey);
     if (stored === 'light' || stored === 'dark') return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   };
 
   const applyTheme = (theme, persist = false) => {
@@ -222,19 +227,6 @@
       showToast('Copy failed — tap the email instead');
     }
   });
-
-  const colorPreference = window.matchMedia('(prefers-color-scheme: dark)');
-  const onSystemThemeChange = (event) => {
-    if (!localStorage.getItem(storageKey)) {
-      applyTheme(event.matches ? 'dark' : 'light');
-    }
-  };
-
-  if (typeof colorPreference.addEventListener === 'function') {
-    colorPreference.addEventListener('change', onSystemThemeChange);
-  } else if (typeof colorPreference.addListener === 'function') {
-    colorPreference.addListener(onSystemThemeChange);
-  }
 
   requestAnimationFrame(() => document.body.classList.add('is-ready'));
 })();
