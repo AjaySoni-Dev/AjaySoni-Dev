@@ -43,6 +43,66 @@
     return link;
   };
 
+  const loadPortfolioEnhancements = () => {
+    if (document.getElementById('portfolio-enhancements')) return;
+    const link = document.createElement('link');
+    link.id = 'portfolio-enhancements';
+    link.rel = 'stylesheet';
+    link.href = '/portfolio-enhancements.css?v=20260918-1';
+    document.head.appendChild(link);
+  };
+
+  const setupPortfolioActions = () => {
+    const linkList = document.querySelector('.link-list');
+    const resourcesCard = document.getElementById('resourcesCard');
+    if (!linkList || !resourcesCard || document.querySelector('.resume-card')) return;
+
+    const resumeCard = document.createElement('a');
+    resumeCard.className = 'link-card resume-card reveal';
+    resumeCard.style.setProperty('--delay', '430ms');
+    resumeCard.href = '/Resume.pdf';
+    resumeCard.download = 'Ajay_Soni_Resume.pdf';
+    resumeCard.setAttribute('aria-label', 'Download Ajay Soni resume PDF');
+    resumeCard.innerHTML = `
+      <span class="icon-box icon-box--resume" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M7 3.5h7l3 3v7"/>
+          <path d="M14 3.5v3h3"/>
+          <path d="M7 3.5h7M7 3.5v17h7"/>
+          <path d="M17 14v6M14.5 17.5 17 20l2.5-2.5"/>
+        </svg>
+      </span>
+      <span class="link-copy">
+        <span class="link-title">Download Resume</span>
+        <span class="link-subtitle">Ajay Soni · PDF</span>
+      </span>
+      <span class="link-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg>
+      </span>`;
+
+    const devAriseCard = document.createElement('a');
+    devAriseCard.className = 'link-card devarise-card reveal';
+    devAriseCard.style.setProperty('--delay', '470ms');
+    devAriseCard.href = 'https://devarise.in/';
+    devAriseCard.target = '_blank';
+    devAriseCard.rel = 'noopener noreferrer';
+    devAriseCard.setAttribute('aria-label', 'Open Dev Arise Platform');
+    devAriseCard.innerHTML = `
+      <span class="icon-box icon-box--devarise" aria-hidden="true">
+        <img class="devarise-wordmark" src="/assets/devarise-wordmark.svg" alt="" width="970" height="213" decoding="async" />
+      </span>
+      <span class="link-copy">
+        <span class="link-title">Dev Arise Platform</span>
+        <span class="link-subtitle">devarise.in</span>
+      </span>
+      <span class="link-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg>
+      </span>`;
+
+    linkList.insertBefore(resumeCard, resourcesCard);
+    resourcesCard.replaceWith(devAriseCard);
+  };
+
   const applySeoMetadata = () => {
     const canonicalUrl = 'https://ajaysonidev.vercel.app/';
     const profileImage = `${canonicalUrl}assets/profile.jpg`;
@@ -50,12 +110,12 @@
     const description = 'Ajay Soni is an AI System Builder and SAS Certified Associate focused on applied AI/ML, computer vision, practical ML systems, and product engineering.';
 
     document.title = title;
-    ensureMeta('description', `${description} Explore GitHub, LinkedIn, projects, and professional contact links.`);
+    ensureMeta('description', `${description} Explore GitHub, LinkedIn, Dev Arise, resume, projects, and professional contact links.`);
     ensureMeta('author', 'Ajay Soni');
     ensureMeta('robots', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
     ensureMeta('googlebot', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
     ensureMeta('bingbot', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
-    ensureMeta('keywords', 'Ajay Soni, AI System Builder, Applied AI, Machine Learning, Computer Vision, AI ML, SAS Certified Associate, Python, AI Systems, AjaySoni-Dev, ajaysoni-dev');
+    ensureMeta('keywords', 'Ajay Soni, AI System Builder, Applied AI, Machine Learning, Computer Vision, AI ML, SAS Certified Associate, Python, AI Systems, DevArise, AjaySoni-Dev, ajaysoni-dev');
     ensureMeta('application-name', 'Ajay Soni');
     ensureMeta('creator', 'Ajay Soni');
 
@@ -69,7 +129,7 @@
     ensurePropertyMeta('og:site_name', 'Ajay Soni');
     ensurePropertyMeta('og:locale', 'en_IN');
     ensurePropertyMeta('og:title', title);
-    ensurePropertyMeta('og:description', 'Applied AI/ML and computer vision systems builder. Explore Ajay Soni’s professional profiles, projects, and contact links.');
+    ensurePropertyMeta('og:description', 'Applied AI/ML and computer vision systems builder. Explore Ajay Soni’s professional profiles, resume, projects, and contact links.');
     ensurePropertyMeta('og:url', canonicalUrl);
     ensurePropertyMeta('og:image', profileImage);
     ensurePropertyMeta('og:image:secure_url', profileImage);
@@ -80,81 +140,9 @@
 
     ensureMeta('twitter:card', 'summary_large_image');
     ensureMeta('twitter:title', title);
-    ensureMeta('twitter:description', 'Applied AI/ML and computer vision systems builder. Explore projects and professional links.');
+    ensureMeta('twitter:description', 'Applied AI/ML and computer vision systems builder. Explore projects, resume, and professional links.');
     ensureMeta('twitter:image', profileImage);
     ensureMeta('twitter:image:alt', 'Ajay Soni — AI System Builder and SAS Certified Associate');
-
-    if (!document.getElementById('ajay-structured-data')) {
-      const structuredData = document.createElement('script');
-      structuredData.id = 'ajay-structured-data';
-      structuredData.type = 'application/ld+json';
-      structuredData.textContent = JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [
-          {
-            '@type': 'Person',
-            '@id': `${canonicalUrl}#person`,
-            name: 'Ajay Soni',
-            alternateName: ['AjaySoni-Dev', 'ajaysoni-dev'],
-            url: canonicalUrl,
-            image: {
-              '@type': 'ImageObject',
-              url: profileImage,
-              contentUrl: profileImage,
-              caption: 'Ajay Soni'
-            },
-            email: 'mailto:officialprofessionalmail@gmail.com',
-            jobTitle: 'AI System Builder',
-            description,
-            sameAs: [
-              'https://github.com/AjaySoni-Dev',
-              'https://www.linkedin.com/in/ajaysoni-dev/',
-              'https://www.instagram.com/im_ajay.soni/'
-            ],
-            knowsAbout: [
-              'Artificial Intelligence',
-              'Machine Learning',
-              'Computer Vision',
-              'Applied AI/ML',
-              'AI Systems',
-              'Python',
-              'SAS Visual Statistics',
-              'Product Engineering'
-            ],
-            hasCredential: {
-              '@type': 'EducationalOccupationalCredential',
-              name: 'SAS Certified Associate: Modeling Using SAS Visual Statistics',
-              credentialCategory: 'Professional Certification'
-            }
-          },
-          {
-            '@type': 'WebSite',
-            '@id': `${canonicalUrl}#website`,
-            url: canonicalUrl,
-            name: 'Ajay Soni',
-            alternateName: 'Ajay Soni Professional Profile',
-            description: 'Official professional links and portfolio gateway for Ajay Soni.',
-            inLanguage: 'en',
-            publisher: { '@id': `${canonicalUrl}#person` }
-          },
-          {
-            '@type': 'ProfilePage',
-            '@id': `${canonicalUrl}#profilepage`,
-            url: canonicalUrl,
-            name: 'Ajay Soni | AI System Builder',
-            description: 'Official profile and professional links for Ajay Soni.',
-            mainEntity: { '@id': `${canonicalUrl}#person` },
-            isPartOf: { '@id': `${canonicalUrl}#website` },
-            primaryImageOfPage: {
-              '@type': 'ImageObject',
-              url: profileImage
-            },
-            inLanguage: 'en'
-          }
-        ]
-      });
-      document.head.appendChild(structuredData);
-    }
   };
 
   const preferredTheme = () => {
@@ -213,6 +201,8 @@
     textarea.remove();
   };
 
+  loadPortfolioEnhancements();
+  setupPortfolioActions();
   applySeoMetadata();
   applyTheme(preferredTheme());
 
