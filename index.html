@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#eaf8f1" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="light" />
   <title>Ajay Soni | AI System Builder &amp; SAS Certified Associate</title>
   <meta name="description" content="Ajay Soni is an AI System Builder and SAS Certified Associate focused on applied AI/ML, computer vision, practical ML systems, AI systems, and product engineering. Explore GitHub, LinkedIn, resume, DevArise, projects, and professional contact links." />
   <meta name="author" content="Ajay Soni" />
@@ -122,13 +122,6 @@
       --shadow: 0 18px 44px rgba(35,88,70,.14);
       --shadow-soft: 0 9px 26px rgba(35,88,70,.10);
     }
-    html[data-theme="dark"] {
-      --card: linear-gradient(135deg, rgba(33,58,48,.95), rgba(20,42,34,.91));
-      --card-hover: linear-gradient(135deg, rgba(39,68,56,.98), rgba(25,49,40,.95));
-      --card-border: rgba(150,220,190,.22);
-      --glass: rgba(26,47,39,.86);
-      --glass-strong: rgba(32,57,47,.97);
-    }
     body {
       background:
         radial-gradient(95% 58% at -8% 5%, rgba(86,215,173,.24), transparent 58%),
@@ -136,13 +129,6 @@
         radial-gradient(78% 58% at 9% 88%, rgba(74,205,158,.18), transparent 64%),
         radial-gradient(60% 46% at 86% 75%, rgba(255,255,255,.58), transparent 70%),
         linear-gradient(150deg, #f8fcfa 0%, #edf9f4 46%, #dff3e9 100%);
-    }
-    html[data-theme="dark"] body {
-      background:
-        radial-gradient(96% 62% at -8% 6%, rgba(47,139,105,.22), transparent 60%),
-        radial-gradient(78% 56% at 108% 12%, rgba(55,118,130,.18), transparent 62%),
-        radial-gradient(80% 60% at 8% 90%, rgba(37,116,88,.16), transparent 65%),
-        linear-gradient(150deg, #0c1713 0%, #10231b 52%, #0b1813 100%);
     }
     body::after {
       content: "";
@@ -155,10 +141,6 @@
       opacity: .23;
       -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
       mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
-    }
-    html[data-theme="dark"] body::after {
-      background-image: radial-gradient(circle, rgba(150,222,193,.10) .55px, transparent .7px);
-      opacity: .17;
     }
     .ambient { filter: blur(92px); opacity: .67; }
     .ambient--one { width: 340px; height: 340px; background: rgba(77,211,163,.26); }
@@ -177,10 +159,8 @@
     .icon-box--resume svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .icon-box--devarise { background: #050505; padding: 6px 4px; overflow: hidden; }
     .icon-box--devarise img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 7px; }
-    html[data-theme="dark"] .icon-box--resume { color: #9fd7bf; background: rgba(83,126,108,.22); }
 
     .social-button { border-color: rgba(58,119,96,.16); background: rgba(255,255,255,.86); box-shadow: 0 7px 22px rgba(35,88,70,.11), 0 1px 0 rgba(255,255,255,.70) inset; }
-    html[data-theme="dark"] .social-button { background: rgba(31,54,45,.90); border-color: rgba(150,220,190,.16); }
     .icon-box--linkedin svg { width: 25px; height: 25px; overflow: visible; }
     .social-button[aria-label="LinkedIn"] { color: var(--muted); }
     .social-button[aria-label="LinkedIn"]:hover { color: var(--accent); }
@@ -189,8 +169,6 @@
     .copy-button { min-width: 52px; height: 27px; padding-inline: 9px; }
     .copy-label { font-size: .70rem; }
     .copy-check { width: 14px; height: 14px; }
-    .theme-toggle { width: 40px; height: 40px; }
-    .theme-icon { width: 19px; height: 19px; }
 
     @media (max-width: 430px) {
       .page-shell { padding-top: max(clamp(24px, 3.8dvh, 34px), env(safe-area-inset-top)); padding-bottom: max(76px, calc(env(safe-area-inset-bottom) + 68px)); }
@@ -287,10 +265,6 @@
   <div class="ambient ambient--two" aria-hidden="true"></div>
   <div class="ambient ambient--three" aria-hidden="true"></div>
 
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Switch theme">
-    <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.1A8.6 8.6 0 0 1 8.9 3.6 8.6 8.6 0 1 0 20.4 15.1Z"/></svg>
-    <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41"/></svg>
-  </button>
 
   <main class="page-shell">
     <section class="profile" aria-labelledby="profile-name">
@@ -313,46 +287,54 @@
     </section>
 
     <nav class="link-list" aria-label="Ajay Soni links">
-      <a class="link-card reveal" style="--delay: 250ms" href="mailto:officialprofessionalmail@gmail.com" aria-label="Email Ajay Soni">
-        <span class="icon-box icon-box--email" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 5.5h17v13h-17z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg></span>
-        <span class="link-copy"><span class="link-title">Email</span><span class="link-subtitle">officialprofessionalmail@gmail.com</span></span>
+      <a class="link-card projects-card reveal" style="--delay: 250ms" href="https://ajaysonibrave.vercel.app/projects" target="_blank" rel="noopener noreferrer" aria-label="Explore Ajay Soni projects">
+        <span class="icon-box icon-box--projects" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.2"/><rect x="14" y="4" width="6" height="6" rx="1.2"/><rect x="4" y="14" width="6" height="6" rx="1.2"/><rect x="14" y="14" width="6" height="6" rx="1.2"/></svg>
+        </span>
+        <span class="link-copy"><span class="link-title">Projects</span><span class="link-subtitle">Explore my work</span></span>
         <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
       </a>
 
-      <a class="link-card reveal" style="--delay: 295ms" href="https://www.linkedin.com/in/ajaysoni-dev/" target="_blank" rel="noopener noreferrer" aria-label="Open Ajay Soni on LinkedIn">
+      <a class="link-card reveal" style="--delay: 290ms" href="https://github.com/AjaySoni-Dev" target="_blank" rel="noopener noreferrer" aria-label="Open Ajay Soni on GitHub">
+        <span class="icon-box icon-box--github" aria-hidden="true"><svg viewBox="0 0 24 24" class="brand-fill"><path d="M12 2.25a9.75 9.75 0 0 0-3.08 19c.49.09.67-.21.67-.47v-1.86c-2.72.59-3.3-1.16-3.3-1.16-.44-1.13-1.09-1.43-1.09-1.43-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.88 1.5 2.3 1.07 2.86.82.09-.64.34-1.07.62-1.32-2.17-.25-4.46-1.09-4.46-4.82 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.68 1a9.25 9.25 0 0 1 4.88 0c1.86-1.26 2.67-1 2.67-1 .54 1.34.2 2.33.1 2.58.63.68 1.01 1.55 1.01 2.61 0 3.75-2.29 4.57-4.47 4.81.35.3.66.9.66 1.82v2.7c0 .26.18.57.67.47A9.75 9.75 0 0 0 12 2.25Z"/></svg></span>
+        <span class="link-copy"><span class="link-title">GitHub</span><span class="link-subtitle">Code &amp; open-source work</span></span>
+        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
+      </a>
+
+      <a class="link-card reveal" style="--delay: 330ms" href="https://www.linkedin.com/in/ajaysoni-dev/" target="_blank" rel="noopener noreferrer" aria-label="Open Ajay Soni on LinkedIn">
         <span class="icon-box icon-box--linkedin" aria-hidden="true">
           <svg viewBox="0 0 24 24"><rect x="3.25" y="3.25" width="17.5" height="17.5" rx="2.2" fill="currentColor"/><circle cx="8.05" cy="8.05" r="1.25" fill="#ffffff"/><rect x="6.9" y="10.3" width="2.3" height="7.05" rx=".18" fill="#ffffff"/><path d="M11.15 10.3h2.22v.97c.58-.78 1.43-1.25 2.54-1.25 2.05 0 3.05 1.31 3.05 3.75v3.58h-2.34v-3.28c0-1.36-.43-2.05-1.39-2.05-1.08 0-1.74.77-1.74 2.25v3.08h-2.34z" fill="#ffffff"/></svg>
         </span>
-        <span class="link-copy"><span class="link-title">LinkedIn</span><span class="link-subtitle">Connect with me</span></span>
+        <span class="link-copy"><span class="link-title">LinkedIn</span><span class="link-subtitle">Professional profile</span></span>
         <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
       </a>
 
-      <a class="link-card reveal" style="--delay: 340ms" href="https://github.com/AjaySoni-Dev" target="_blank" rel="noopener noreferrer" aria-label="Open Ajay Soni on GitHub">
-        <span class="icon-box icon-box--github" aria-hidden="true"><svg viewBox="0 0 24 24" class="brand-fill"><path d="M12 2.25a9.75 9.75 0 0 0-3.08 19c.49.09.67-.21.67-.47v-1.86c-2.72.59-3.3-1.16-3.3-1.16-.44-1.13-1.09-1.43-1.09-1.43-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.88 1.5 2.3 1.07 2.86.82.09-.64.34-1.07.62-1.32-2.17-.25-4.46-1.09-4.46-4.82 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.68 1a9.25 9.25 0 0 1 4.88 0c1.86-1.26 2.67-1 2.67-1 .54 1.34.2 2.33.1 2.58.63.68 1.01 1.55 1.01 2.61 0 3.75-2.29 4.57-4.47 4.81.35.3.66.9.66 1.82v2.7c0 .26.18.57.67.47A9.75 9.75 0 0 0 12 2.25Z"/></svg></span>
-        <span class="link-copy"><span class="link-title">GitHub</span><span class="link-subtitle">Check out my projects</span></span>
-        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
-      </a>
-
-      <a class="link-card reveal" style="--delay: 385ms" href="https://www.instagram.com/im_ajay.soni/" target="_blank" rel="noopener noreferrer" aria-label="Open Ajay Soni on Instagram">
-        <span class="icon-box icon-box--instagram" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.4" cy="6.7" r="1" class="dot-fill"/></svg></span>
-        <span class="link-copy"><span class="link-title">Instagram</span><span class="link-subtitle">@im_ajay.soni</span></span>
-        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
-      </a>
-
-      <a class="link-card reveal" style="--delay: 430ms" href="/Resume.pdf" download="Ajay-Soni-Resume.pdf" aria-label="Download Ajay Soni resume PDF">
+      <a class="link-card resume-card reveal" style="--delay: 370ms" href="/Resume.pdf" download="Ajay-Soni-Resume.pdf" aria-label="Download Ajay Soni resume PDF">
         <span class="icon-box icon-box--resume" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3.75h7l3 3V20.25H7z"/><path d="M14 3.75v3h3M12 9.25v6M9.5 12.75 12 15.25l2.5-2.5M9.5 18h5"/></svg></span>
         <span class="link-copy"><span class="link-title">Download Resume</span><span class="link-subtitle">Resume.pdf · PDF</span></span>
         <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
       </a>
 
-      <a class="link-card reveal" style="--delay: 475ms" href="https://devarise.in/" target="_blank" rel="noopener noreferrer" aria-label="Open DevArise platform">
+      <a class="link-card devarise-card reveal" style="--delay: 410ms" href="https://devarise.in/" target="_blank" rel="noopener noreferrer" aria-label="Open DevArise platform">
         <span class="icon-box icon-box--devarise" aria-hidden="true"><img src="/assets/devarise-logo.svg" alt="" width="320" height="110" loading="eager" decoding="async" /></span>
         <span class="link-copy"><span class="link-title">DevArise Platform</span><span class="link-subtitle">DevArise.in</span></span>
         <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
       </a>
+
+      <a class="link-card reveal" style="--delay: 450ms" href="mailto:officialprofessionalmail@gmail.com" aria-label="Email Ajay Soni">
+        <span class="icon-box icon-box--email" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 5.5h17v13h-17z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg></span>
+        <span class="link-copy"><span class="link-title">Email</span><span class="link-subtitle">officialprofessionalmail@gmail.com</span></span>
+        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
+      </a>
+
+      <a class="link-card reveal" style="--delay: 490ms" href="https://www.instagram.com/im_ajay.soni/" target="_blank" rel="noopener noreferrer" aria-label="Open Ajay Soni on Instagram">
+        <span class="icon-box icon-box--instagram" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.4" cy="6.7" r="1" class="dot-fill"/></svg></span>
+        <span class="link-copy"><span class="link-title">Instagram</span><span class="link-subtitle">@im_ajay.soni</span></span>
+        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span>
+      </a>
     </nav>
 
-    <footer class="social-footer reveal" style="--delay: 520ms" aria-label="Social links">
+    <footer class="social-footer reveal" style="--delay: 540ms" aria-label="Social links">
       <a class="social-button" href="mailto:officialprofessionalmail@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3.5 5.5h17v13h-17z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg></a>
       <a class="social-button" href="https://www.linkedin.com/in/ajaysoni-dev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.34 7.43a2.06 2.06 0 1 0 0-4.12 2.06 2.06 0 0 0 0 4.12ZM3.56 20.45h3.56V9H3.56v11.45Zm5.79 0h3.55v-5.67c0-1.49.28-2.94 2.14-2.94 1.82 0 1.85 1.71 1.85 3.04v5.57h3.55v-6.29c0-3.09-.67-5.45-4.27-5.45-1.73 0-2.89.95-3.37 1.85h-.05V9H9.35v11.45Z"/></svg></a>
       <a class="social-button" href="https://github.com/AjaySoni-Dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" class="brand-fill"><path d="M12 2.25a9.75 9.75 0 0 0-3.08 19c.49.09.67-.21.67-.47v-1.86c-2.72.59-3.3-1.16-3.3-1.16-.44-1.13-1.09-1.43-1.09-1.43-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.88 1.5 2.3 1.07 2.86.82.09-.64.34-1.07.62-1.32-2.17-.25-4.46-1.09-4.46-4.82 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.68 1a9.25 9.25 0 0 1 4.88 0c1.86-1.26 2.67-1 2.67-1 .54 1.34.2 2.33.1 2.58.63.68 1.01 1.55 1.01 2.61 0 3.75-2.29 4.57-4.47 4.81.35.3.66.9.66 1.82v2.7c0 .26.18.57.67.47A9.75 9.75 0 0 0 12 2.25Z"/></svg></a>
