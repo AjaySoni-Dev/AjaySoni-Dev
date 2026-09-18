@@ -59,7 +59,7 @@
   loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-8');
   loadStylesheet('desktop-responsive', '/desktop-responsive.css?v=20260918-2');
 
-  const canonicalUrl = 'https://ajaysonidev.vercel.app/';
+  const canonicalUrl = 'https://www.ajaysonidev.site/';
   const profileImage = `${canonicalUrl}assets/profile.jpg`;
   const title = 'Ajay Soni | Applied AI/ML & Computer Vision Systems Builder';
   const description = 'Ajay Soni is an Applied AI/ML & Computer Vision Systems Builder focused on practical ML systems, computer vision, AI systems, and product engineering. SAS Certified Associate.';
@@ -75,10 +75,10 @@
   ensureMeta('creator', 'Ajay Soni');
 
   ensureLink('canonical', canonicalUrl);
-  const icon = ensureLink('icon', '/assets/profile.jpg?v=20260917-photo-1', { type: 'image/jpeg', sizes: 'any' });
+  const icon = ensureLink('icon', '/favicon.png?v=20260918-domain-1', { type: 'image/png', sizes: '96x96' });
   icon.setAttribute('fetchpriority', 'high');
-  ensureLink('apple-touch-icon', '/assets/profile.jpg?v=20260917-photo-1', { sizes: '180x180' });
-  ensureLink('manifest', '/site.webmanifest?v=20260917-photo-1');
+  ensureLink('apple-touch-icon', '/assets/profile.jpg?v=20260918-domain-1', { sizes: '320x320' });
+  ensureLink('manifest', '/site.webmanifest?v=20260918-domain-1');
 
   ensurePropertyMeta('og:type', 'profile');
   ensurePropertyMeta('og:site_name', 'Ajay Soni');
