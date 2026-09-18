@@ -21,4 +21,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://ajaysonidev.vercel.app/sitemap.xml
+Sitemap: https://www.ajaysonidev.site/sitemap.xml
