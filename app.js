@@ -56,7 +56,7 @@
     document.head.appendChild(link);
   };
 
-  loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-4');
+  loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-5');
   loadStylesheet('desktop-responsive', '/desktop-responsive.css?v=20260918-2');
 
   const canonicalUrl = 'https://ajaysonidev.vercel.app/';
@@ -145,6 +145,58 @@
       window.setTimeout(() => copyButton.classList.remove('is-copied'), 1600);
     } catch {
       showToast('Copy failed — tap the email instead');
+    }
+  });
+
+
+  const imageViewerTrigger = document.getElementById('imageViewerTrigger');
+  const imageViewer = document.getElementById('imageViewer');
+  const imageViewerImage = document.getElementById('imageViewerImage');
+  const imageViewerClose = document.getElementById('imageViewerClose');
+  const imageViewerBackdrop = imageViewer?.querySelector('[data-image-viewer-close]');
+  let imageViewerReturnFocus = null;
+  let imageViewerHideTimer = null;
+
+  const openImageViewer = () => {
+    if (!imageViewer || !imageViewerTrigger || !imageViewerImage) return;
+    clearTimeout(imageViewerHideTimer);
+    imageViewerReturnFocus = document.activeElement;
+
+    if (!imageViewerImage.getAttribute('src')) {
+      imageViewerImage.setAttribute('src', imageViewerImage.dataset.src || '/assets/image.png');
+    }
+
+    imageViewer.hidden = false;
+    imageViewerTrigger.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('image-viewer-open');
+
+    requestAnimationFrame(() => {
+      imageViewer.classList.add('is-open');
+      imageViewerClose?.focus({ preventScroll: true });
+    });
+  };
+
+  const closeImageViewer = () => {
+    if (!imageViewer || imageViewer.hidden) return;
+    imageViewer.classList.remove('is-open');
+    imageViewerTrigger?.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('image-viewer-open');
+
+    imageViewerHideTimer = window.setTimeout(() => {
+      imageViewer.hidden = true;
+      const focusTarget = imageViewerReturnFocus instanceof HTMLElement
+        ? imageViewerReturnFocus
+        : imageViewerTrigger;
+      focusTarget?.focus({ preventScroll: true });
+    }, 190);
+  };
+
+  imageViewerTrigger?.addEventListener('click', openImageViewer);
+  imageViewerClose?.addEventListener('click', closeImageViewer);
+  imageViewerBackdrop?.addEventListener('click', closeImageViewer);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && imageViewer && !imageViewer.hidden) {
+      closeImageViewer();
     }
   });
 

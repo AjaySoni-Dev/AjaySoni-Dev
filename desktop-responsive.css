@@ -266,3 +266,43 @@
     transform: none;
   }
 }
+
+
+/* Balance card-logo visual weight on desktop/laptop; footer icons remain unchanged. */
+@media (min-width: 601px) {
+  .icon-box--github > svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .icon-box--linkedin > svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .card-brand-icon--gmail,
+  .card-brand-icon--instagram {
+    width: 25px;
+    height: 25px;
+  }
+
+  .card-brand-icon--projects {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (min-width: 601px) and (max-height: 780px) {
+  .icon-box--github > svg,
+  .icon-box--linkedin > svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .card-brand-icon--gmail,
+  .card-brand-icon--instagram,
+  .card-brand-icon--projects {
+    width: 22px;
+    height: 22px;
+  }
+}
