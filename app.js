@@ -61,8 +61,8 @@
 
   const canonicalUrl = 'https://ajaysonidev.vercel.app/';
   const profileImage = `${canonicalUrl}assets/profile.jpg`;
-  const title = 'Ajay Soni | AI System Builder & SAS Certified Associate';
-  const description = 'Ajay Soni is an AI System Builder and SAS Certified Associate focused on applied AI/ML, computer vision, practical ML systems, and product engineering.';
+  const title = 'Ajay Soni | Applied AI/ML & Computer Vision Systems Builder';
+  const description = 'Ajay Soni is an Applied AI/ML & Computer Vision Systems Builder focused on practical ML systems, computer vision, AI systems, and product engineering. SAS Certified Associate.';
 
   document.title = title;
   ensureMeta('description', `${description} Explore projects, GitHub, LinkedIn, DevArise, resume, and professional contact links.`);
@@ -89,7 +89,7 @@
   ensurePropertyMeta('og:image', profileImage);
   ensurePropertyMeta('og:image:secure_url', profileImage);
   ensurePropertyMeta('og:image:type', 'image/jpeg');
-  ensurePropertyMeta('og:image:alt', 'Ajay Soni — AI System Builder and SAS Certified Associate');
+  ensurePropertyMeta('og:image:alt', 'Ajay Soni — Applied AI/ML & Computer Vision Systems Builder');
   ensurePropertyMeta('profile:first_name', 'Ajay');
   ensurePropertyMeta('profile:last_name', 'Soni');
 
@@ -97,7 +97,7 @@
   ensureMeta('twitter:title', title);
   ensureMeta('twitter:description', 'Applied AI/ML and computer vision systems builder. Explore projects, resume, and professional links.');
   ensureMeta('twitter:image', profileImage);
-  ensureMeta('twitter:image:alt', 'Ajay Soni — AI System Builder and SAS Certified Associate');
+  ensureMeta('twitter:image:alt', 'Ajay Soni — Applied AI/ML & Computer Vision Systems Builder');
 
   if (footerLinkedIn) {
     footerLinkedIn.style.color = 'var(--muted)';

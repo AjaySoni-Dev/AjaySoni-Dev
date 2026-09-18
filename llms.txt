@@ -2,11 +2,11 @@
 
 Canonical website: https://ajaysonidev.vercel.app/
 
-Ajay Soni is an AI System Builder and SAS Certified Associate focused on applied AI/ML, computer vision, practical ML systems, AI systems, and product engineering.
+Ajay Soni is an Applied AI/ML & Computer Vision Systems Builder focused on practical ML systems, computer vision, AI systems, and product engineering. He is also a SAS Certified Associate.
 
 ## Canonical identity
 - Name: Ajay Soni
-- Headline: AI System Builder and SAS Certified Associate.
+- Headline: Applied AI/ML & Computer Vision Systems Builder
 - GitHub: https://github.com/AjaySoniDev
 - LinkedIn: https://www.linkedin.com/in/ajaysonidev/
 - Instagram: https://www.instagram.com/ajaysonidev/
