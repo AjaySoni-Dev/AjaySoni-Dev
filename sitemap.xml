@@ -3,18 +3,18 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://ajaysonidev.vercel.app/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <loc>https://www.ajaysonidev.site/</loc>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://ajaysonidev.vercel.app/assets/profile.jpg</image:loc>
+      <image:loc>https://www.ajaysonidev.site/assets/profile.jpg</image:loc>
       <image:title>Ajay Soni — Applied AI/ML &amp; Computer Vision Systems Builder</image:title>
       <image:caption>Official profile photograph of Ajay Soni.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ajaysonidev.vercel.app/projects.html</loc>
+    <loc>https://www.ajaysonidev.site/projects.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
