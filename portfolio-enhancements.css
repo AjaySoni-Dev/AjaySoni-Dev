@@ -350,7 +350,7 @@
   max-width: 90vw;
   max-height: 84dvh;
   aspect-ratio: var(--viewer-aspect, 1080 / 1574);
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(255,255,255,.78);
   border-radius: 8px;
   background: #fff;
@@ -368,13 +368,14 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: inherit;
   background: #fff;
 }
 
 .image-viewer__close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: -44px;
+  right: 0;
   display: grid;
   place-items: center;
   width: 34px;
@@ -419,6 +420,11 @@ body.image-viewer-open {
     width: min(90vw, calc(82dvh * var(--viewer-ratio, .686)), 430px);
     max-height: 82dvh;
     border-radius: 7px;
+  }
+
+  .image-viewer__close {
+    top: -42px;
+    right: 0;
   }
 }
 
