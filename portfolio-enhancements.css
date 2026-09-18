@@ -1,3 +1,51 @@
+
+/* Card-only brand/icon assets. Footer icon styling is intentionally untouched. */
+.card-brand-icon {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.icon-box--email {
+  background: rgba(255,255,255,.94);
+}
+
+.card-brand-icon--gmail {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-box--instagram {
+  background: rgba(255,255,255,.94);
+}
+
+.card-brand-icon--instagram {
+  width: 29px;
+  height: 29px;
+}
+
+.icon-box--resume {
+  color: inherit;
+  background: rgba(255,248,248,.96);
+}
+
+.card-brand-icon--pdf {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-box--projects {
+  background: rgba(211,241,229,.90);
+}
+
+.card-brand-icon--projects {
+  width: 24px;
+  height: 24px;
+}
+
 /* Professional action hierarchy: Projects, GitHub, LinkedIn, Resume, DevArise, contact and social. */
 
 .icon-box--projects {
@@ -5,30 +53,12 @@
   background: rgba(211, 241, 229, .88);
 }
 
-.icon-box--projects svg {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 .icon-box--resume {
   color: #2f9270;
   background: rgba(211, 241, 229, .88);
 }
 
-.icon-box--resume svg {
-  width: 25px;
-  height: 25px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 .icon-box--devarise {
   overflow: hidden;
