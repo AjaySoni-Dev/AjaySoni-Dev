@@ -282,8 +282,8 @@
 
   .card-brand-icon--gmail,
   .card-brand-icon--instagram {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
   }
 
   .card-brand-icon--projects {
@@ -300,7 +300,11 @@
   }
 
   .card-brand-icon--gmail,
-  .card-brand-icon--instagram,
+  .card-brand-icon--instagram {
+    width: 20px;
+    height: 20px;
+  }
+
   .card-brand-icon--projects {
     width: 22px;
     height: 22px;

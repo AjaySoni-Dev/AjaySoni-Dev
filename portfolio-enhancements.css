@@ -261,8 +261,8 @@
 
 .card-brand-icon--gmail,
 .card-brand-icon--instagram {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
 }
 
 .icon-box--github > svg {
@@ -285,22 +285,23 @@
   width: 42px;
   height: 42px;
   padding: 0;
-  border: 1px solid rgba(47, 128, 237, .18);
-  border-radius: 50%;
+  border: 0;
+  border-radius: 0;
   color: #2f80ed;
-  background: rgba(255,255,255,.90);
-  box-shadow: 0 9px 26px rgba(35,88,70,.11), 0 1px 0 rgba(255,255,255,.88) inset;
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   cursor: pointer;
-  transition: transform 180ms var(--ease), box-shadow 180ms var(--ease), background 180ms var(--ease), color 180ms var(--ease);
+  transition: transform 180ms var(--ease), color 180ms var(--ease), opacity 180ms var(--ease);
 }
 
 .image-viewer-trigger:hover {
   transform: translateY(-1px);
   color: #1f6fd5;
-  background: rgba(255,255,255,.98);
-  box-shadow: 0 12px 30px rgba(35,88,70,.14), 0 1px 0 rgba(255,255,255,.92) inset;
+  background: transparent;
+  box-shadow: none;
+  opacity: .92;
 }
 
 .image-viewer-trigger:active {
@@ -344,11 +345,11 @@
 .image-viewer__panel {
   position: relative;
   z-index: 1;
-  width: min(86vw, 440px);
+  width: min(86vw, 82dvh, 440px);
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.78);
-  border-radius: 22px;
+  border-radius: 8px;
   background: #fff;
   box-shadow: 0 28px 72px rgba(8,31,22,.30), 0 1px 0 rgba(255,255,255,.95) inset;
   transform: translateY(10px) scale(.965);
@@ -412,8 +413,8 @@ body.image-viewer-open {
   }
 
   .image-viewer__panel {
-    width: min(88vw, 390px);
-    border-radius: 20px;
+    width: min(88vw, 82dvh, 390px);
+    border-radius: 7px;
   }
 }
 
@@ -422,5 +423,11 @@ body.image-viewer-open {
   .image-viewer__panel,
   .image-viewer-trigger {
     transition: none !important;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 620px) {
+  .image-viewer__panel {
+    width: min(72dvh, 440px);
   }
 }

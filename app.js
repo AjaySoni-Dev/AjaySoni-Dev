@@ -56,7 +56,7 @@
     document.head.appendChild(link);
   };
 
-  loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-5');
+  loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-6');
   loadStylesheet('desktop-responsive', '/desktop-responsive.css?v=20260918-2');
 
   const canonicalUrl = 'https://ajaysonidev.vercel.app/';
