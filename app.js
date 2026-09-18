@@ -70,7 +70,7 @@
   ensureMeta('robots', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
   ensureMeta('googlebot', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
   ensureMeta('bingbot', 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1');
-  ensureMeta('keywords', 'Ajay Soni, AI System Builder, Applied AI, Machine Learning, Computer Vision, AI ML, SAS Certified Associate, Python, AI Systems, DevArise, AjaySoni-Dev, ajaysoni-dev');
+  ensureMeta('keywords', 'Ajay Soni, AI System Builder, Applied AI, Machine Learning, Computer Vision, AI ML, SAS Certified Associate, Python, AI Systems, DevArise, AjaySoniDev, ajaysonidev');
   ensureMeta('application-name', 'Ajay Soni');
   ensureMeta('creator', 'Ajay Soni');
 

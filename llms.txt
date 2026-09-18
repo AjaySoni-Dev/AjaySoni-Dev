@@ -7,8 +7,8 @@ Ajay Soni is an AI System Builder and SAS Certified Associate focused on applied
 ## Canonical identity
 - Name: Ajay Soni
 - Headline: AI System Builder and SAS Certified Associate.
-- GitHub: https://github.com/AjaySoni-Dev
-- LinkedIn: https://www.linkedin.com/in/ajaysoni-dev/
+- GitHub: https://github.com/AjaySoniDev
+- LinkedIn: https://www.linkedin.com/in/ajaysonidev/
 - Instagram: https://www.instagram.com/ajaysonidev/
 - Email: officialprofessionalmail@gmail.com
 

@@ -13,7 +13,7 @@
 <br />
 
 <p>
-  <a href="https://github.com/AjaySoni-Dev?tab=repositories">
+  <a href="https://github.com/AjaySoniDev?tab=repositories">
     <img src="https://img.shields.io/badge/Projects-AI%20%7C%20ML%20%7C%20Data%20Science-2563EB?style=for-the-badge" alt="Projects" />
   </a>
   <img src="https://img.shields.io/badge/Focus-Applied%20Machine%20Learning-16A34A?style=for-the-badge" alt="Focus" />
@@ -23,19 +23,19 @@
 <br />
 
 <p>
-  <a href="https://www.linkedin.com/in/ajaysoni-dev/">
+  <a href="https://www.linkedin.com/in/ajaysonidev/">
     <img src="https://img.shields.io/badge/LinkedIn-Ajay%20Soni-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="mailto:programmingwithcode@gmail.com">
     <img src="https://img.shields.io/badge/Email-programmingwithcode%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-  <a href="https://github.com/AjaySoni-Dev">
+  <a href="https://github.com/AjaySoniDev">
     <img src="https://img.shields.io/badge/GitHub-AjaySoni--Dev-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </p>
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=AjaySoni-Dev&style=for-the-badge&color=2563EB" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=AjaySoniDev&style=for-the-badge&color=2563EB" alt="Profile views" />
 </p>
 
 </div>
@@ -60,7 +60,7 @@ My current focus areas are machine learning workflows, computer vision pipelines
         GPS-free visual route memory research system using video frames, EfficientNetB0 embeddings, similarity matching, and backtracking branch-graph logic.
       </p>
       <p align="center">
-        <a href="https://github.com/AjaySoni-Dev/VXN-RAMNet">
+        <a href="https://github.com/AjaySoniDev/VXN-RAMNet">
           <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="VXN-RAMNet Repository" />
         </a>
       </p>
@@ -75,7 +75,7 @@ My current focus areas are machine learning workflows, computer vision pipelines
         Structured AI and Data Science project lab with implemented notebook bundles across basic, intermediate, and advanced learning levels.
       </p>
       <p align="center">
-        <a href="https://github.com/AjaySoni-Dev/AI-DS-100">
+        <a href="https://github.com/AjaySoniDev/AI-DS-100">
           <img src="https://img.shields.io/badge/View%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="AI-DS-100 Repository" />
         </a>
       </p>
@@ -181,7 +181,7 @@ My current focus areas are machine learning workflows, computer vision pipelines
     <td align="center">
       <a href="https://git.io/awesome-stats-card">
         <img
-          src="https://awesome-github-stats.azurewebsites.net/user-stats/AjaySoni-Dev?cardType=level&theme=dark&fontFamily=&preferLogin=false&Border=18040400"
+          src="https://awesome-github-stats.azurewebsites.net/user-stats/AjaySoniDev?cardType=level&theme=dark&fontFamily=&preferLogin=false&Border=18040400"
           alt="Ajay Soni GitHub Stats"
         />
       </a>
@@ -189,7 +189,7 @@ My current focus areas are machine learning workflows, computer vision pipelines
     <!-- <td align="center">
       <a href="https://git.io/awesome-stats-card">
         <img
-          src="https://github-readme-streak-stats.herokuapp.com?user=AjaySoni-Dev&theme=dark&hide_border=true"
+          src="https://github-readme-streak-stats.herokuapp.com?user=AjaySoniDev&theme=dark&hide_border=true"
           alt="Ajay Soni GitHub Stats"
         />
       </a>
