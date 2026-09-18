@@ -13,4 +13,10 @@
       <image:caption>Official profile photograph of Ajay Soni.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://ajaysonidev.vercel.app/projects.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

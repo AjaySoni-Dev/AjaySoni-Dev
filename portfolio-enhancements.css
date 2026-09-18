@@ -345,8 +345,11 @@
 .image-viewer__panel {
   position: relative;
   z-index: 1;
-  width: min(86vw, 82dvh, 440px);
-  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  width: min(90vw, calc(84dvh * var(--viewer-ratio, .686)), 520px);
+  max-width: 90vw;
+  max-height: 84dvh;
+  aspect-ratio: var(--viewer-aspect, 1080 / 1574);
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.78);
   border-radius: 8px;
@@ -364,7 +367,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
 }
 
 .image-viewer__close {
@@ -411,9 +415,9 @@ body.image-viewer-open {
     width: 21px;
     height: 21px;
   }
-
   .image-viewer__panel {
-    width: min(88vw, 82dvh, 390px);
+    width: min(90vw, calc(82dvh * var(--viewer-ratio, .686)), 430px);
+    max-height: 82dvh;
     border-radius: 7px;
   }
 }
@@ -428,6 +432,7 @@ body.image-viewer-open {
 
 @media (orientation: landscape) and (max-height: 620px) {
   .image-viewer__panel {
-    width: min(72dvh, 440px);
+    width: min(88vw, calc(72dvh * var(--viewer-ratio, .686)), 440px);
+    max-height: 72dvh;
   }
 }

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#eaf8f1" />
+  <meta name="color-scheme" content="light" />
+  <title>Projects | Ajay Soni</title>
+  <meta name="description" content="Selected public projects by Ajay Soni across applied AI/ML, computer vision, AI security, and practical ML systems." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://ajaysonidev.vercel.app/projects.html" />
+  <link rel="icon" href="/assets/profile.jpg?v=20260917-photo-1" type="image/jpeg" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      color: #163127;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(90% 55% at -8% 4%, rgba(86,215,173,.22), transparent 58%),
+        radial-gradient(76% 52% at 108% 10%, rgba(111,190,210,.18), transparent 60%),
+        radial-gradient(74% 54% at 12% 92%, rgba(74,205,158,.16), transparent 64%),
+        linear-gradient(150deg, #f8fcfa 0%, #edf9f4 48%, #dff3e9 100%);
+    }
+    a { color: inherit; }
+    .shell {
+      width: min(calc(100% - 30px), 980px);
+      margin: 0 auto;
+      padding: max(28px, env(safe-area-inset-top)) 0 max(34px, env(safe-area-inset-bottom));
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 0 14px;
+      border: 1px solid rgba(45,108,84,.16);
+      border-radius: 999px;
+      text-decoration: none;
+      color: #536f64;
+      background: rgba(255,255,255,.82);
+      box-shadow: 0 8px 24px rgba(35,88,70,.08);
+    }
+    .back svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .brand { display: inline-flex; align-items: center; gap: 9px; color: #6a8178; font-size: .84rem; font-weight: 500; }
+    .brand img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+    .intro { max-width: 700px; margin-bottom: 26px; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.04; letter-spacing: -.045em; }
+    .intro p { margin: 12px 0 0; max-width: 640px; color: #70877e; font-size: clamp(.94rem, 2vw, 1.05rem); line-height: 1.65; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .project {
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+      padding: 22px;
+      border: 1px solid rgba(50,119,94,.20);
+      border-radius: 20px;
+      text-decoration: none;
+      background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(239,249,245,.90));
+      box-shadow: 0 14px 34px rgba(34,87,69,.10), 0 1px 0 rgba(255,255,255,.92) inset;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .project:hover { transform: translateY(-3px); border-color: rgba(43,145,108,.34); box-shadow: 0 19px 42px rgba(34,87,69,.14), 0 1px 0 rgba(255,255,255,.95) inset; }
+    .project-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 27px;
+      padding: 0 10px;
+      border-radius: 999px;
+      color: #2e8062;
+      background: rgba(211,241,229,.86);
+      font-size: .71rem;
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+    .arrow { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: #6d877d; background: rgba(255,255,255,.76); }
+    .arrow svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .project h2 { margin: 30px 0 8px; font-size: 1.2rem; line-height: 1.25; }
+    .project p { margin: 0; color: #7c9189; font-size: .86rem; line-height: 1.55; }
+    .repo { margin-top: auto; padding-top: 20px; color: #408e71; font-size: .78rem; font-weight: 500; }
+    .footer { margin-top: 24px; color: #7d9189; text-align: center; font-size: .78rem; }
+    @media (max-width: 700px) {
+      .shell { width: min(calc(100% - 26px), 620px); padding-top: max(22px, env(safe-area-inset-top)); }
+      .topbar { margin-bottom: 22px; }
+      .brand span { display: none; }
+      .grid { grid-template-columns: 1fr; gap: 10px; }
+      .project { min-height: 185px; padding: 18px; border-radius: 17px; }
+      .project h2 { margin-top: 24px; font-size: 1.08rem; }
+    }
+    @media (max-width: 380px) {
+      .shell { width: calc(100% - 20px); }
+      .back { padding-inline: 12px; font-size: .82rem; }
+      .project { padding: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .project { transition: none; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar">
+      <a class="back" href="/" aria-label="Back to Ajay Soni profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+        <span>Back</span>
+      </a>
+      <span class="brand"><img src="/assets/profile.jpg" alt="" /><span>Ajay Soni</span></span>
+    </div>
+
+    <section class="intro">
+      <h1>Projects</h1>
+      <p>Selected public work across applied AI/ML, computer vision, AI security, and practical machine-learning systems.</p>
+    </section>
+
+    <section class="grid" aria-label="Selected projects">
+      <a class="project" href="https://github.com/AjaySoni-Dev/VXN-RAMNet" target="_blank" rel="noopener noreferrer">
+        <div class="project-top"><span class="badge">Research prototype</span><span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span></div>
+        <h2>VXN-RAMNet</h2>
+        <p>GPS-free visual route-memory research prototype for constrained camera-only route learning and recognition.</p>
+        <span class="repo">GitHub · AjaySoni-Dev/VXN-RAMNet</span>
+      </a>
+
+      <a class="project" href="https://github.com/AjaySoni-Dev/VeriTrustLab" target="_blank" rel="noopener noreferrer">
+        <div class="project-top"><span class="badge">Active prototype</span><span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span></div>
+        <h2>VeriTrustLab</h2>
+        <p>Email threat detection, infrastructure analysis, forensic intelligence, and provenance-aware evidence workflows.</p>
+        <span class="repo">GitHub · AjaySoni-Dev/VeriTrustLab</span>
+      </a>
+
+      <a class="project" href="https://github.com/AjaySoni-Dev/AI-DS-100" target="_blank" rel="noopener noreferrer">
+        <div class="project-top"><span class="badge">Project lab</span><span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span></div>
+        <h2>AI-DS-100</h2>
+        <p>Structured notebook-based applied AI and Data Science project collection for practical learning and portfolio work.</p>
+        <span class="repo">GitHub · AjaySoni-Dev/AI-DS-100</span>
+      </a>
+
+      <a class="project" href="https://github.com/AjaySoni-Dev/AdversarialPrompt-Scanner" target="_blank" rel="noopener noreferrer">
+        <div class="project-top"><span class="badge">AI security</span><span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span></div>
+        <h2>AdversarialPrompt-Scanner</h2>
+        <p>Prompt-injection and adversarial-prompt scanning workflow for protecting downstream LLM interactions.</p>
+        <span class="repo">GitHub · AjaySoni-Dev/AdversarialPrompt-Scanner</span>
+      </a>
+
+      <a class="project" href="https://github.com/AjaySoni-Dev/Waste-Segmentation-CNN" target="_blank" rel="noopener noreferrer">
+        <div class="project-top"><span class="badge">CV prototype</span><span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span></div>
+        <h2>Waste-Segmentation-CNN</h2>
+        <p>Smart waste classification and route-optimization educational prototype built around image classification.</p>
+        <span class="repo">GitHub · AjaySoni-Dev/Waste-Segmentation-CNN</span>
+      </a>
+
+      <a class="project" href="https://github.com/AjaySoni-Dev/PerceptronX-Lib" target="_blank" rel="noopener noreferrer">
+        <div class="project-top"><span class="badge">Learning library</span><span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 12h13M14 7l5 5-5 5"/></svg></span></div>
+        <h2>PerceptronX-Lib</h2>
+        <p>Custom Python perceptron learning library covering training, scaling, prediction, and evaluation fundamentals.</p>
+        <span class="repo">GitHub · AjaySoni-Dev/PerceptronX-Lib</span>
+      </a>
+    </section>
+
+    <p class="footer">Ajay Soni · Public project selection</p>
+  </main>
+</body>
+</html>

@@ -56,7 +56,7 @@
     document.head.appendChild(link);
   };
 
-  loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-6');
+  loadStylesheet('portfolio-enhancements', '/portfolio-enhancements.css?v=20260918-7');
   loadStylesheet('desktop-responsive', '/desktop-responsive.css?v=20260918-2');
 
   const canonicalUrl = 'https://ajaysonidev.vercel.app/';
@@ -157,13 +157,26 @@
   let imageViewerReturnFocus = null;
   let imageViewerHideTimer = null;
 
+  const syncImageViewerAspect = () => {
+    if (!imageViewer || !imageViewerImage || !imageViewerImage.naturalWidth || !imageViewerImage.naturalHeight) return;
+    const ratio = imageViewerImage.naturalWidth / imageViewerImage.naturalHeight;
+    imageViewer.style.setProperty('--viewer-ratio', String(ratio));
+    imageViewer.style.setProperty('--viewer-aspect', `${imageViewerImage.naturalWidth} / ${imageViewerImage.naturalHeight}`);
+  };
+
   const openImageViewer = () => {
     if (!imageViewer || !imageViewerTrigger || !imageViewerImage) return;
     clearTimeout(imageViewerHideTimer);
     imageViewerReturnFocus = document.activeElement;
 
     if (!imageViewerImage.getAttribute('src')) {
-      imageViewerImage.setAttribute('src', imageViewerImage.dataset.src || '/assets/image.png');
+      imageViewerImage.setAttribute('src', imageViewerImage.dataset.src || '/assets/Image.jpg');
+    }
+
+    if (imageViewerImage.complete) {
+      syncImageViewerAspect();
+    } else {
+      imageViewerImage.addEventListener('load', syncImageViewerAspect, { once: true });
     }
 
     imageViewer.hidden = false;
