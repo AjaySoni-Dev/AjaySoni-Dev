@@ -170,7 +170,7 @@
     imageViewerReturnFocus = document.activeElement;
 
     if (!imageViewerImage.getAttribute('src')) {
-      imageViewerImage.setAttribute('src', imageViewerImage.dataset.src || '/assets/Image.jpg');
+      imageViewerImage.setAttribute('src', imageViewerImage.dataset.src || '/assets/image.jpg');
     }
 
     if (imageViewerImage.complete) {
